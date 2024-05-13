@@ -63,13 +63,10 @@ Set the environment variables in your IDE. If you are new at setting environment
 Required Environment Variables
 
 ```
-BLOGGIOS_MAIL_API_KEY -> Give any value but remember to use same for other microservices too for intercommunication
 BOOTSTRAP_SERVER -> Link to kafka broker server. You can start kafka broker locally (localhost:9092)
 ES_PASSWORD -> Password of your Elasticsearch
 ES_SERVER -> Elastic Search password Link (localhost:9200)
 ES_USERNAME -> Elasticsearch Username
-GOOGLE_CLIENT_ID -> Give any random value or if want to test Google OAuth Locally then generate client id and secret from Google Developer Console
-GOOGLE_CLIENT_SECRET -> Give any random value or if want to test Google OAuth Locally then generate client id and secret from Google Developer Console
 POSTGRES_DATABASE -> Postgresql Database name
 POSTGRES_HOST -> Postgres Database Host
 POSTGRES_PASSWORD -> Postgres Database Password

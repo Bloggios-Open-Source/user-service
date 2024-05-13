@@ -54,9 +54,7 @@ elasticsearch:
   username: ${ES_USERNAME}
   password: ${ES_PASSWORD}
   indices:
-    user: ${ACTIVE_PROFILE:local}.auth-server.user
-    registration-otp: ${ACTIVE_PROFILE:local}.auth-server.registration-otp
-    forget-password: ${ACTIVE_PROFILE:local}.auth-server.forget-password
+    profile: ${ACTIVE_PROFILE:local}.auth-server.profile
 
 authentication:
   key-provider:

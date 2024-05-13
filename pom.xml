@@ -115,6 +115,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.bloggios.authentication-config</groupId>
+            <artifactId>authentication-configuration-jar</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -128,6 +133,13 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>bloggios-repository</id>
+            <url>https://spring-repo.bloggios.cloud</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>

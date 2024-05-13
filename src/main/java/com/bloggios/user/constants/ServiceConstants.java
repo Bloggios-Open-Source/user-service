@@ -18,4 +18,7 @@ public class ServiceConstants {
     public static final String JSON_B = "jsonb";
     public static final String BREADCRUMB_ID = "breadcrumbId";
     public static final String INTERNAL_ERROR = "INTERNAL ERROR";
+    public static final String DEFAULT_NORMALIZER = "default_normalizer_keyword";
+    public static final String DEFAULT_AUTOCOMPLETE = "default_autocomplete_text";
+    public static final String VERBATIM = "verbatim";
 }
