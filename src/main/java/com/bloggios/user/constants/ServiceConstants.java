@@ -21,4 +21,5 @@ public class ServiceConstants {
     public static final String DEFAULT_NORMALIZER = "default_normalizer_keyword";
     public static final String DEFAULT_AUTOCOMPLETE = "default_autocomplete_text";
     public static final String VERBATIM = "verbatim";
+    public static final String NAME_REGEX = "^[a-zA-Z ]+$";
 }

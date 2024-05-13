@@ -15,4 +15,9 @@ import lombok.experimental.UtilityClass;
 public class DataErrorCodes {
 
     public static final String INVALID_PROFILE_TAG_VALUE = "DE__USER-2001";
+    public static final String NAME_MANDATORY = "DE__USER-2002";
+    public static final String NAME_NOT_VALID = "DE__USER-2003";
+    public static final String BIO_LENGTH_EXCEED = "DE__USER-2004";
+    public static final String BIO_WORD_LIMIT_EXCEED = "DE__USER-2005";
+    public static final String BIO_LINES_EXCEED = "DE__USER-2006";
 }

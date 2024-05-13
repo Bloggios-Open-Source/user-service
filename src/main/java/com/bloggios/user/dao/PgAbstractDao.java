@@ -23,7 +23,7 @@
 
 package com.bloggios.user.dao;
 
-import com.bloggios.authserver.enums.DaoStatus;
+import com.bloggios.user.enums.DaoStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
