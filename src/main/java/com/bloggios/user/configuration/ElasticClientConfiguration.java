@@ -57,7 +57,7 @@ import java.security.cert.CertificateFactory;
  */
 
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.bloggios.user.dao")
+@EnableElasticsearchRepositories(basePackages = "com.bloggios.user.dao.repository.esrepository")
 @ComponentScan(basePackages = "com.bloggios.user")
 public class ElasticClientConfiguration extends AbstractElasticsearchConfiguration {
 
