@@ -20,4 +20,5 @@ import lombok.experimental.UtilityClass;
 public class InternalErrorCodes {
 
     public static final String EXCEPTION_CODES = "IE__USER-1001";
+    public static final String INTERNAL_ERROR = "IE__USER-1002";
 }

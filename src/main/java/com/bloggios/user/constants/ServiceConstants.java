@@ -16,4 +16,6 @@ public class ServiceConstants {
 
     public static final String RANDOM_UUID = "randomUUID";
     public static final String JSON_B = "jsonb";
+    public static final String BREADCRUMB_ID = "breadcrumbId";
+    public static final String INTERNAL_ERROR = "INTERNAL ERROR";
 }
