@@ -214,6 +214,13 @@
                 </executions>
                 <configuration>
                     <excludes>
+                        <exclude>com/bloggios/user/constants/**</exclude>
+                        <exclude>com/bloggios/user/entity/**</exclude>
+                        <exclude>com/bloggios/user/enums/**</exclude>
+                        <exclude>com/bloggios/user/exception/payload/**</exclude>
+                        <exclude>com/bloggios/user/exception/ExceptionProvider.class</exclude>
+                        <exclude>com/bloggios/user/UserServiceApplication.class</exclude>
+                        <exclude>com/bloggios/user/payload/**</exclude>
                     </excludes>
                 </configuration>
             </plugin>

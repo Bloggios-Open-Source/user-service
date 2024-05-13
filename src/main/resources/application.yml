@@ -1,0 +1,86 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: auth-server # Application name
+  kafka:
+    bootstrap-servers: ${BOOTSTRAP_SERVER} # Kafka Broker host and port
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+    consumer:
+      auto-offset-reset: latestI want
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+        spring.json.trusted.packages: com.bloggios.authserver
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST}:5432/${POSTGRES_DATABASE}?currentSchema=auth-server
+    hikari:
+      username: ${POSTGRES_USERNAME} #Postgres Database username
+      password: ${POSTGRES_PASSWORD} #Postgres Database password
+      maximum-pool-size: ${POSTGRES_POOL_SIZE:100}
+      minimum-idle: ${POSTGRES_IDLE:7}
+      leak-detection-threshold: 120000
+      max-lifetime: 1800000
+      idle-timeout: 600000
+      connection-timeout: 600000
+  jpa:
+    hibernate:
+      ddl-auto: update # To automatically create and update tables
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            redirect-uri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+
+application:
+  version: @version@ #Fetching version from pom.xml
+  profile: ${ACTIVE_PROFILE:local}
+  cookie-name: ${ACTIVE_PROFILE:local}_bg--auth_mgmt
+  api-key: ${BLOGGIOS_MAIL_API_KEY}
+
+elasticsearch:
+  server: ${ES_SERVER}
+  username: ${ES_USERNAME}
+  password: ${ES_PASSWORD}
+  indices:
+    user: ${ACTIVE_PROFILE:local}.auth-server.user
+    registration-otp: ${ACTIVE_PROFILE:local}.auth-server.registration-otp
+    forget-password: ${ACTIVE_PROFILE:local}.auth-server.forget-password
+
+authentication:
+  key-provider:
+    public-key: classpath:security/pubkey.pem
+    private-key: classpath:security/privkey.pem
+  path-exclude:
+    paths:
+      - /auth-server/v1/auth/**
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:localhost}
+    enabled: false
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+
+feign:
+  email-service: ${BASE_URL}

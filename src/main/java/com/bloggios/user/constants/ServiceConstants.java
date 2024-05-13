@@ -15,4 +15,5 @@ import lombok.experimental.UtilityClass;
 public class ServiceConstants {
 
     public static final String RANDOM_UUID = "randomUUID";
+    public static final String JSON_B = "jsonb";
 }
