@@ -20,4 +20,6 @@ public class DataErrorCodes {
     public static final String BIO_LENGTH_EXCEED = "DE__USER-2004";
     public static final String BIO_WORD_LIMIT_EXCEED = "DE__USER-2005";
     public static final String BIO_LINES_EXCEED = "DE__USER-2006";
+    public static final String UNSECURED_PROTOCOL = "DE__USER-2007";
+    public static final String LINK_PROTOCOL_NOT_PRESENT = "DE__USER-2008";
 }

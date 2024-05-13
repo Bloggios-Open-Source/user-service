@@ -22,4 +22,6 @@ public class ServiceConstants {
     public static final String DEFAULT_AUTOCOMPLETE = "default_autocomplete_text";
     public static final String VERBATIM = "verbatim";
     public static final String NAME_REGEX = "^[a-zA-Z ]+$";
+    public static final String UNSECURED_PROTOCOL = "http://";
+    public static final String SECURED_PROTOCOL = "https://";
 }
