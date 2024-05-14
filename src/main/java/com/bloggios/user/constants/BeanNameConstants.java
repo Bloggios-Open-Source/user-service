@@ -18,4 +18,6 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class BeanNameConstants {
     public static final String ERROR_PROPERTIES_BEAN = "importErrorCodesBean";
+    public static final String ASYNC_TASK_INTERNAL_POOL = "asyncTaskInternalPool";
+    public static final String ASYNC_TASK_EXTERNAL_POOL = "asyncTaskExternalPool";
 }
