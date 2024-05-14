@@ -1,5 +1,7 @@
 package com.bloggios.user.payload.request;
 
+import com.bloggios.authenticationconfig.payload.AuthenticatedUser;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 import net.bytebuddy.asm.Advice;
@@ -25,5 +27,8 @@ public class ProfileRequest {
     private String bio;
     private String link;
     private String profileTag;
+
+    @JsonIgnore
+    private AuthenticatedUser authenticatedUser;
 
 }

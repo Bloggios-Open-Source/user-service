@@ -19,4 +19,5 @@ public class EnvironmentConstants {
     public static final String ES_SERVER = "elasticsearch.server";
     public static final String ES_USERNAME = "elasticsearch.username";
     public static final String ES_PASSWORD = "elasticsearch.password";
+    public static final String APPLICATION_VERSION = "application.version";
 }

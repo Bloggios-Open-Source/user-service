@@ -22,4 +22,5 @@ public class DataErrorCodes {
     public static final String BIO_LINES_EXCEED = "DE__USER-2006";
     public static final String UNSECURED_PROTOCOL = "DE__USER-2007";
     public static final String LINK_PROTOCOL_NOT_PRESENT = "DE__USER-2008";
+    public static final String PROFILE_ALREADY_ADDED = "DE__USER-2009";
 }

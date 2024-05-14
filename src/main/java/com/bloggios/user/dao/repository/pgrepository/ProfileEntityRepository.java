@@ -3,6 +3,8 @@ package com.bloggios.user.dao.repository.pgrepository;
 import com.bloggios.user.entity.ProfileEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
+
 /**
  * Owner - Rohit Parihar and Bloggios
  * Author - rohit
@@ -13,4 +15,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 
 public interface ProfileEntityRepository extends JpaRepository<ProfileEntity, String> {
+
+    Optional<ProfileEntity> findByUserId(String userId);
 }

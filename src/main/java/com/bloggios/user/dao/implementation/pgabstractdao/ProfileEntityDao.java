@@ -5,6 +5,8 @@ import com.bloggios.user.dao.repository.pgrepository.ProfileEntityRepository;
 import com.bloggios.user.entity.ProfileEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 /**
  * Owner - Rohit Parihar and Bloggios
  * Author - rohit
@@ -19,5 +21,9 @@ public class ProfileEntityDao extends PgAbstractDao<ProfileEntity, ProfileEntity
 
     protected ProfileEntityDao(ProfileEntityRepository repository) {
         super(repository);
+    }
+
+    public Optional<ProfileEntity> findByUserId(String userId) {
+        return repository.findByUserId(userId);
     }
 }
