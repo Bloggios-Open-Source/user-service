@@ -45,6 +45,7 @@ public class ProfileRequestToEntityTransformer implements Transform<ProfileEntit
                 .email(profileRequest.getAuthenticatedUser().getEmail())
                 .username(profileRequest.getAuthenticatedUser().getUsername())
                 .bio(profileRequest.getBio())
+                .link(profileRequest.getLink())
                 .profileTag(StringUtils.hasText(profileRequest.getProfileTag()) ? ProfileTag.getByValue(profileRequest.getProfileTag()) : null)
                 .userId(profileRequest.getAuthenticatedUser().getUserId())
                 .createdOn(new Date())

@@ -51,6 +51,9 @@ public class ProfileEntity {
     @Column(length = 5000)
     private String bio;
 
+    @Column(length = 1000)
+    private String link;
+
     @Enumerated(EnumType.STRING)
     private ProfileTag profileTag;
 
